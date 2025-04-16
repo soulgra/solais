@@ -1,15 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-const { withSentryConfig } = require('@sentry/nextjs');
-
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     domains: ['assets.coingecko.com', 'static.alchemyapi.io', 'i.imgur.com'],
   },
   experimental: {
-    clientTraceMetadata: true,
+    clientTraceMetadata: [],
   },
   // 跳过类型检查以加速构建
   typescript: {
@@ -21,7 +18,5 @@ const nextConfig = {
   },
 };
 
-module.exports = withSentryConfig(nextConfig, {
-  // Sentry配置
-  silent: true, // 忽略Sentry警告
-});
+// 简化配置，暂时移除Sentry集成以解决构建问题
+module.exports = nextConfig;

@@ -1,12 +1,11 @@
 {
     "version": 2,
-    "buildCommand": "npm run build",
+    "buildCommand": "npm run vercel-build",
     "outputDirectory": ".next",
     "framework": "nextjs",
     "env": {
         "OPENAI_API_KEY": "sk-placeholder-key-for-deployment"
     },
-    "ignoreCommand": "echo 'Ignoring build errors'",
     "build": {
         "env": {
             "NEXT_PUBLIC_PRIVY_APP_ID": "cm9e0pujr02hpl40modm8mypi"
